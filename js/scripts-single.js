@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         // contact
         gsap.utils.toArray("body").forEach(section => {
           gsap.from(section.querySelectorAll(".part4"), {
-            scrollTrigger: "#contact-wrapper",
+            scrollTrigger: "#contact",
             autoAlpha: 0,
             y: 25,
             duration: 0.75,

@@ -28,9 +28,9 @@ function animationOver(id, direction) {
 
     letterContainer.forEach(letter => {
         if (direction == "over") {
-            gsap.to(letter, { y: -5, ease: "power1", color: "black", opacity: 0.5, delay: delay});
+            gsap.to(letter, { y: -5, ease: "power1", color: "var(--black)", opacity: 0.5, delay: delay});
         } else {
-            gsap.to(letter, { y: 0, ease: "power1", color: "white", opacity: 1, delay: delay});
+            gsap.to(letter, { y: 0, ease: "power1", color: "var(--black)", opacity: 1, delay: delay});
         }
       delay += 0.1;
 	});

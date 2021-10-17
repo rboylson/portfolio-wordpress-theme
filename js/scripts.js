@@ -9,7 +9,7 @@ function openNav() {
 
 function closeNav() {
     if (window.innerWidth < 767) {
-        document.getElementById("menu").style.right = "-100vw";
+        document.getElementById("menu").style.right = "-150vw";
         document.getElementById("open").style.display = "block";
         document.getElementById("close").style.display = "none";
     }
