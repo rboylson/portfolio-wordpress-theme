@@ -1,74 +1,87 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-    window.onload = function() {
+document.addEventListener("DOMContentLoaded", function (event) {
+  window.onload = function () {
+    gsap.registerPlugin(ScrollTrigger);
 
-        gsap.registerPlugin(ScrollTrigger);
-        // ScrollTrigger.defaults({ scroller: ".site-wrapper" });
+    // hero
+    gsap.utils.toArray("body").forEach((section) => {
+      gsap.from(section.querySelectorAll(".part1"), {
+        scrollTrigger: "#home",
+        autoAlpha: 0,
+        y: 25,
+        duration: 0.75,
+        stagger: 0.25,
+      });
+    });
 
-        // hero
-        gsap.utils.toArray("body").forEach(section => {
-          gsap.from(section.querySelectorAll(".part1"), {
-            scrollTrigger: "#home",
-            autoAlpha: 0,
-            y: 25,
-            duration: 0.75,
-            stagger: 0.25,
-          });
-        });
+    // portfolio title
+    gsap.utils.toArray("body").forEach((section) => {
+      gsap.from(section.querySelectorAll(".part2"), {
+        scrollTrigger: {
+          trigger: "#portfolio",
+          start: "top center",
+        },
+        autoAlpha: 0,
+        y: 25,
+        duration: 0.75,
+        stagger: 0.1,
+      });
+    });
 
-        // portfolio
-        gsap.utils.toArray("body").forEach(section => {
-          gsap.from(section.querySelectorAll(".part2"), {
-            scrollTrigger: {
-              trigger: "#portfolio",
-              start: "top center",
-            },
-            autoAlpha: 0,
-            y: 25,
-            duration: 0.75,
-            stagger: 0.1,
-          });
-        });
+    let portfolioItem = document.querySelector("#portfolio");
+    let portfolioItemList = portfolioItem.querySelectorAll(
+      ".portfolio-item-wrapper"
+    );
 
-        // about
-        gsap.utils.toArray("body").forEach(section => {
-          gsap.from(section.querySelectorAll(".part3"), {
-            scrollTrigger: {
-              trigger: "#about",
-              start: "top center",
-            },
-            autoAlpha: 0,
-            y: 25,
-            duration: 0.75,
-            stagger: 0.1,
-          });
-        });
+    // portfolioItemList.forEach((section) => {
+    //   let list = section.querySelectorAll(".part3a");
+    //   list.forEach((i) => {
+    //     console.log(i);
+    //   });
+    // });
 
-        // about
-        gsap.utils.toArray("body").forEach(section => {
-          gsap.from(section.querySelectorAll(".part3a"), {
-            scrollTrigger: {
-              trigger: "#about",
-              start: "top center",
-            },
-            autoAlpha: 0,
-            y: 25,
-            duration: 0.75,
-            stagger: 0.1,
-          });
-        });
+    // portfolio projects
+    portfolioItemList.forEach((section) => {
+      // let list = section.querySelectorAll(".part3a");
+      gsap.from(section.querySelectorAll(".part3a"), {
+        // gsap.from(i, {
+        scrollTrigger: {
+          trigger: section,
+          start: "top center",
+        },
+        autoAlpha: 0,
+        y: 25,
+        duration: 0.75,
+        stagger: 0.1,
+        // =        });
+      });
+    });
 
-        // contact
-        gsap.utils.toArray("body").forEach(section => {
-          gsap.from(section.querySelectorAll(".part4"), {
-            scrollTrigger: {
-              trigger: "#contact",
-              start: "top center",
-            },
-            autoAlpha: 0,
-            y: 25,
-            duration: 0.75,
-            stagger: 0.25,
-          });
-        });
-    };
+    // about
+    gsap.utils.toArray("body").forEach((section) => {
+      gsap.from(section.querySelectorAll(".part3"), {
+        scrollTrigger: {
+          trigger: "#about",
+          start: "top center",
+        },
+        autoAlpha: 0,
+        y: 25,
+        duration: 0.75,
+        stagger: 0.1,
+      });
+    });
+
+    // contact
+    gsap.utils.toArray("body").forEach((section) => {
+      gsap.from(section.querySelectorAll(".part4"), {
+        scrollTrigger: {
+          trigger: "#contact",
+          start: "top center",
+        },
+        autoAlpha: 0,
+        y: 25,
+        duration: 0.75,
+        stagger: 0.25,
+      });
+    });
+  };
 });

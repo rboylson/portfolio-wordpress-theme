@@ -13,8 +13,11 @@ if ( ! function_exists( 'mytheme_register_nav_menu' ) ) {
     add_action( 'after_setup_theme', 'mytheme_register_nav_menu', 0 );
 }
 
-
 function rmb_portfolio_scripts() {
+    
+    // gsap
+    wp_enqueue_script( 'rmb_portfolio-gsap-cdn', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js', false );
+    wp_enqueue_script( 'rmb_portfolio-scroll-trigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js', false );
 
 	// styles
 	wp_enqueue_style( 'rmb_portfolio-style', get_stylesheet_uri() );
@@ -26,7 +29,7 @@ function rmb_portfolio_scripts() {
 	// jQuery
 	wp_enqueue_script( 'rmb_portfolio-jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', true );
 
-	// javascript
+	// // javascript
 	wp_enqueue_script( 'rmb_portfolio-scripts', get_template_directory_uri() . '/js/scripts.js', true );
 	wp_enqueue_script( 'rmb_portfolio-scripts-footer', get_template_directory_uri() . '/js/footer.js', true );
 
@@ -37,10 +40,6 @@ function rmb_portfolio_scripts() {
     if (is_single()) {
         wp_enqueue_script( 'rmb_portfolio-scripts-single', get_template_directory_uri() . '/js/scripts-single.js', true );
     }
-
-	// gsap
-	wp_enqueue_script( 'rmb_portfolio-gsap-cdn', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js', false );
-	wp_enqueue_script( 'rmb_portfolio-scroll-trigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js', false );
 
 }
 
