@@ -22,8 +22,8 @@
 		<a id="close" onclick="closeNav()">✕</a>
 		<div id="menu" class="part1">
 			<a href="/<?php echo (is_home() ? '#home' : '') ?>" onclick="closeNav()">Home</a>
-			<a href="<?php echo (is_home() ? '#portfolio' : '/#portfolio') ?>"onclick="closeNav()">Projects</a>
 			<a href="<?php echo (is_home() ? '#about' : '/#about') ?>" onclick="closeNav()">About</a>
+			<a href="<?php echo (is_home() ? '#portfolio' : '/#portfolio') ?>"onclick="closeNav()">Projects</a>
 			<a href="#contact" onclick="closeNav()" onclick="closeNav()">Contact</a>
 			<div id="menu-line"></div>
 		</div>

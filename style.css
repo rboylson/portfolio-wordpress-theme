@@ -74,15 +74,27 @@ video {
 
 /* typography */
 /* ------------------------------ */
+
+.name {
+  font-size: 70px;
+}
+
+.title {
+  font-size: 35px;
+}
+
 h1,
 .h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 52px;
+  font-size: 45px;
   text-transform: uppercase;
   font-weight: var(--regular);
   line-height: 1;
   font-style: normal;
   margin: 0;
+  /* background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 h2,
@@ -124,8 +136,21 @@ a:hover,
 }
 
 @media screen and (max-width: 767px) {
-  h1 {
+  h1,
+  .h1 {
     font-size: 30px;
+  }
+
+  h2,
+  .h2,
+  a {
+    font-size: 18px;
+  }
+
+  h3,
+  p,
+  .details a {
+    font-size: 18px;
   }
 }
 
@@ -240,7 +265,7 @@ a:hover,
 }
 
 .title {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .hero-line {
@@ -384,7 +409,7 @@ a:hover,
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 500px;
+  max-width: 80%;
 }
 
 .about-content h1 {
@@ -395,6 +420,52 @@ a:hover,
   border-top: 1px solid var(--black);
   width: 80px;
   margin-top: 20px;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.about-wrapper > div {
+  width: 35%;
+}
+
+.technologies {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  font-size: 25px;
+  color: black;
+  padding-top: 25px;
+}
+
+.technology {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.technology .label {
+  font-size: 10px;
+  text-align: center;
+  padding-top: 6px;
+}
+.technology i {
+  font-size: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.technology img {
+  max-height: 40px;
 }
 
 .about-content p {
@@ -440,7 +511,7 @@ a:hover,
 .footer-link {
   width: fit-content;
   position: relative;
-  height: 15px;
+  height: 18px;
   margin-top: 20px;
 }
 

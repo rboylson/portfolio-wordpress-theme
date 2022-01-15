@@ -5,17 +5,58 @@
 		<h1 class='name part1'>
 			<span>Rachel <span class='last-name'>Boylson</span>
 		</h1>
-		<h2 class='title part1'>Front End Web Developer add a bit more here</h2>
+		<h2 class='title part1'>Frontend Web Developer</h2>
 		<div class='hero-line part1'></div>
 	</div>
 	<div class='hero-meta'>
 		<div class='social'>
 			<a class='social-icon envelope' href='mailto:rachelboylson@gmail.com'>
-				<i class='far fa-envelope part1'></i></i>
+				<i class='far fa-envelope part1'></i>
 			</a>
 			<a class='social-icon' href='https://www.linkedin.com/in/rachelboylson/' target='_blank'>
-				<i class='fab fa-linkedin-in part1'></i></i>
+				<i class='fab fa-linkedin-in part1'></i>
 			</a>
+		</div>
+	</div>
+</div>
+
+<div id='about' class='generic-container'>
+	<div class='about-content'>
+		<h1 class='part3'>About</h1>
+		<div class='about-line part3'></div>
+		<div class='about-wrapper'>
+			<div>
+				<p class='part3'>Creative and detail-oriented frontend developer with a proven history of successful collaboration with design and marketing partners to turn designs into reusable, clean, responsive code. </p>
+
+				<div class='about-line part3'></div>
+				<p class='h2 part3'>When I'm not coding, I'm: </p>
+				<p class='part3'>
+					A part time macrame artist<br />
+					An OG Animal Crossing islander<br />
+					Secretly a coffee snob<br />
+				</p>
+			</div>
+			<div>
+				<p class='h2 part3'>Technologies: </p>
+					<div class='part3 technologies'>
+						<div class='technology'><i class="fab fa-html5"></i><span class='label'>HTML</span></div>
+						<div class='technology'><i class="fab fa-css3-alt"></i><span class='label'>CSS</span></div>
+						<div class='technology'><i class="fab fa-sass" style="font-size: 30px;"></i><span class='label'>SASS</span></div>
+						<div class='technology'><i class="fab fa-js-square"></i><span class='label'>JavaScript</span></div>
+						<div class='technology'><i class="fab fa-react"></i><span class='label'>React</span></div>
+						<div class='technology'><i class="fab fa-git-alt"></i><span class='label'>Git</span></div>
+						<div class='technology'><img src='<?php echo get_stylesheet_directory_uri(); ?>/assets/nextjs-icon-dark.svg' /><span class='label'>Next.js</span></div>
+					</div>
+					<div class='part3 technologies'>
+						<div class='technology'><img src='<?php echo get_stylesheet_directory_uri(); ?>/assets/GraphQL Logo (Black).svg' /><span class='label'>GraphQL Querying</span></div>
+						<div class='technology'><img src='<?php echo get_stylesheet_directory_uri(); ?>/assets/heroku-logo-solid-black.svg' /><span class='label'>Heroku</span></div>
+						<div class='technology'><i class="fab fa-wordpress-simple"></i><span class='label'>WordPress</span></div>
+						<div class='technology'><i class="fab fa-php" style="font-size: 30px;"></i><span class='label'>PHP</span></div>
+						<div class='technology'><span><i class="fas fa-database" style="font-size: 35px;"></i></span><span class='label'>SQL</span></div>
+						<div class='technology'><span><i class="fas fa-running" style="font-size: 33px;"></i></span><span class='label'>GSAP</span></div>
+						<div class='technology'><span><i class="fas fa-spinner"></i></span><span class='label'>Agile Scrum</span></div>
+					</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -33,10 +74,10 @@
 							<img src='<?php echo $image['url'];?>' alt='<?php echo $image['alt'];?>' />
 						<?php } ?>
 					</div>
-					<div class='single-details-line'></div>
+					<div class='single-details-line part3a'></div>
 					<div class='single-details'>
 						<h1 class='part3a'><?php echo get_field('name');?></h1>
-						<h3 class='project-blurb part3a'><?php echo get_field('blurb');?></h3>
+						<h3 class='project-blurb part3a'><?php echo get_field('synopsis');?></h3>
 						<div class='single-line part3a'></div>
 						<div class='single-project-details part3a'>
 							<p><span class='h2'><strong>Technology:&nbsp;</strong></span></p>
@@ -60,20 +101,6 @@
 		<?php $count += 1;?>  
 		<?php endwhile;?>
 	<?php endif;?>
-</div>
-
-<div id='about' class='generic-container'>
-	<div class='about-content'>
-		<h1 class='part3'>About</h1>
-		<div class='about-line part3'></div>
-		<p class='part3'>Lorem ipsum dolorosa liber mater et in aeternum lorem ipsum dolorosa liber mater et in aeternum lorem ipsum dolorosa liber mater et in aeternum lorem ipsum dolorosa liber mater et in aeternum lorem ipsum dolorosa liber mater et in aeternum lorem ipsum dolorosa liber mater et in aeternum </p>
-
-		<p class='h2 part3'>When I'm not coding, I'm also: </p>
-
-		<p class='part3'><i class="fas fa-angle-double-down"></i> A part time macrame artist</p>
-		<p class='part3'><i class="fas fa-gamepad"> </i> An OG Animal Crossing islander</p>
-		<p class='part3'><i class="fas fa-mug-hot"></i> Secretly a coffee snob</p>
-	</div>
 </div>
 
 <?php get_footer();
