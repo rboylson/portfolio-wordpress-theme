@@ -4,7 +4,7 @@ Theme used in portfolio: <a href="https://rachelboylson.com/" target="_blank">ht
 
 ## About
 
-A single page Wordpress theme that I created for my portfolio.  I use the Wordpress Loop to create the Projects section from Posts created in my Wordpress dashboard.
+A single page Wordpress theme that I created for my portfolio.  I use the Wordpress loop to create the projects section from posts created in my Wordpress dashboard.
 
 ## Setup
 
