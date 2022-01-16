@@ -4,7 +4,7 @@ Theme URI:
 Author: rachel
 Author URI: http://rachelboylson.com
 Description: Wordpress Theme
-Version: 1.0
+Version: 2.0
 */
 
 /* variables */
@@ -30,6 +30,7 @@ body {
   margin: 0;
   opacity: 1;
   color: var(--black);
+  visibility: hidden;
 }
 
 .generic-container {
@@ -92,9 +93,6 @@ h1,
   line-height: 1;
   font-style: normal;
   margin: 0;
-  /* background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
 }
 
 h2,
@@ -111,12 +109,13 @@ a {
 
 h3,
 p,
-.details a {
+.details a,
+.project-blurb a {
   font-family: "Bodoni Moda", serif;
   text-transform: none;
   font-style: normal;
   font-size: 18px;
-  letter-spacing: 1px;
+  letter-spacing: 0;
   margin: 0;
   font-weight: var(--regular);
 }
@@ -355,10 +354,12 @@ a:hover,
   margin-top: 25px;
 }
 
-.single-line {
-  border-bottom: 1px solid var(--black);
-  width: 80px;
-  margin-top: 20px;
+.project-blurb p {
+  margin-bottom: 30px;
+}
+
+.project-blurb a {
+  text-decoration: underline;
 }
 
 .single-project-details {
@@ -367,6 +368,11 @@ a:hover,
 
 .single-project-details p {
   margin-top: 5px;
+}
+
+.tech-used {
+  font-style: normal;
+  padding-top: 2px;
 }
 
 .buttons {

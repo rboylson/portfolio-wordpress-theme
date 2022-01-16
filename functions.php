@@ -16,20 +16,17 @@ if ( ! function_exists( 'mytheme_register_nav_menu' ) ) {
 function rmb_portfolio_scripts() {
     
     // gsap
-    wp_enqueue_script( 'rmb_portfolio-gsap-cdn', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js', false );
-    wp_enqueue_script( 'rmb_portfolio-scroll-trigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js', false );
+    wp_enqueue_script( 'rmb_portfolio-gsap-cdn', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js', array(), '3.9.1', true );
+    wp_enqueue_script( 'rmb_portfolio-scroll-trigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js', array(), '3.9.1', true );
 
 	// styles
-	wp_enqueue_style( 'rmb_portfolio-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'rmb_portfolio-style', get_stylesheet_uri() . '?v1.1' );
 	wp_enqueue_style( 'rmb_portfolio-font-awesome', 'https://use.fontawesome.com/releases/v5.15.3/css/all.css', true );
 
     // font
     wp_enqueue_style( 'rmb-google-fonts', 'https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@500,700@0;1&family=Montserrat:wght@100;400;600&display=swap', false );
 
-	// jQuery
-	wp_enqueue_script( 'rmb_portfolio-jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', true );
-
-	// // javascript
+	// javascript
 	wp_enqueue_script( 'rmb_portfolio-scripts', get_template_directory_uri() . '/js/scripts.js', true );
 	wp_enqueue_script( 'rmb_portfolio-scripts-footer', get_template_directory_uri() . '/js/footer.js', true );
 
@@ -40,7 +37,6 @@ function rmb_portfolio_scripts() {
     if (is_single()) {
         wp_enqueue_script( 'rmb_portfolio-scripts-single', get_template_directory_uri() . '/js/scripts-single.js', true );
     }
-
 }
 
 //Remove Gutenberg Block Library CSS from loading on the frontend
@@ -49,6 +45,7 @@ function smartwp_remove_wp_block_library_css(){
     wp_dequeue_style( 'wp-block-library-theme' );
     wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
 }
+
 add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
 
 // REMOVE WP EMOJI

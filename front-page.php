@@ -78,10 +78,9 @@
 					<div class='single-details'>
 						<h1 class='part3a'><?php echo get_field('name');?></h1>
 						<h3 class='project-blurb part3a'><?php echo get_field('synopsis');?></h3>
-						<div class='single-line part3a'></div>
 						<div class='single-project-details part3a'>
-							<p><span class='h2'><strong>Technology:&nbsp;</strong></span></p>
-							<p><?php echo get_field('tech_used');?></p>
+							<p><span class='h2'><strong>Technology used:&nbsp;</strong></span></p>
+							<p class='tech-used h2'><?php echo get_field('tech_used');?></p>
 						</div>
 						<div class='part3a buttons'>
 						<?php
