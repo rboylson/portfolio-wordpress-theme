@@ -27,8 +27,6 @@
 		<div class='about-wrapper'>
 			<div>
 				<p class='part3'>Creative and detail-oriented frontend developer with a proven history of successful collaboration with design and marketing partners to turn designs into reusable, clean, responsive code. </p>
-
-				<div class='about-line part3'></div>
 				<p class='h2 part3'>When I'm not coding, I'm: </p>
 				<p class='part3'>
 					A part time macrame artist<br />

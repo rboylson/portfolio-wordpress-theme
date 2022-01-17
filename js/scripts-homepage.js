@@ -35,9 +35,7 @@ function init() {
 
   // portfolio projects
   portfolioItemList.forEach((section) => {
-    // let list = section.querySelectorAll(".part3a");
     gsap.from(section.querySelectorAll(".part3a"), {
-      // gsap.from(i, {
       scrollTrigger: {
         trigger: section,
         start: "top center",
@@ -46,7 +44,6 @@ function init() {
       y: 25,
       duration: 0.75,
       stagger: 0.1,
-      // =        });
     });
   });
 

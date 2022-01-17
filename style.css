@@ -136,13 +136,15 @@ a:hover,
 
 @media screen and (max-width: 767px) {
   h1,
-  .h1 {
+  .h1,
+  .name {
     font-size: 30px;
   }
 
   h2,
   .h2,
-  a {
+  a,
+  .title {
     font-size: 18px;
   }
 
@@ -425,7 +427,7 @@ a:hover,
 .about-line {
   border-top: 1px solid var(--black);
   width: 80px;
-  margin-top: 20px;
+  margin: 20px auto 0 auto;
 }
 
 .about-wrapper {
@@ -462,6 +464,7 @@ a:hover,
   text-align: center;
   padding-top: 6px;
 }
+
 .technology i {
   font-size: 40px;
   height: 40px;
@@ -480,21 +483,36 @@ a:hover,
 
 @media screen and (max-width: 767px) {
   .about-content {
-    width: 100%;
+    max-width: 100%;
     text-align: center;
     align-items: unset;
     margin-top: 100px;
+    margin-bottom: 100px;
   }
 
-  .about-image {
+  .about-wrapper {
+    flex-direction: column;
+  }
+
+  .about-wrapper > div {
     width: 100%;
-    padding-left: 0;
-    text-align: center;
   }
 
-  .about-image img {
-    margin: 35px 0 100px 0;
-    max-width: 150px;
+  .technology {
+    width: 20px;
+  }
+
+  .technology .label {
+    font-size: 7px;
+  }
+
+  .technology i {
+    font-size: 20px !important;
+    height: 20px;
+  }
+
+  .technology img {
+    max-height: 20px;
   }
 }
 
