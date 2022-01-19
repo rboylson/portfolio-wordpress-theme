@@ -492,6 +492,7 @@ a:hover,
 
   .about-wrapper {
     flex-direction: column;
+    text-align: left;
   }
 
   .about-wrapper > div {
@@ -513,6 +514,11 @@ a:hover,
 
   .technology img {
     max-height: 20px;
+  }
+
+  .technologies {
+    max-width: 97%;
+    margin: 0 auto;
   }
 }
 
